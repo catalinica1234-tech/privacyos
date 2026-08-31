@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --privacy-void: #f5f7fa;
+  --privacy-surface: #ffffff;
+  --privacy-surface-2: #eef2f7;
+  --privacy-surface-3: #e7edf5;
+  --privacy-text: #0b1220;
+  --privacy-muted: #526071;
+  --privacy-border: rgba(11, 18, 32, 0.09);
+}
+
+.dark {
+  --privacy-void: #070a0f;
+  --privacy-surface: #0d1118;
+  --privacy-surface-2: #121923;
+  --privacy-surface-3: #17202c;
+  --privacy-text: #f5f7fb;
+  --privacy-muted: #94a3b8;
+  --privacy-border: rgba(255, 255, 255, 0.07);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--privacy-void); color: var(--privacy-text); transition: background-color .2s ease, color .2s ease; }
+button, input, select { font: inherit; }
+::selection { background: rgba(25, 211, 197, .25); }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .surface { background: var(--privacy-surface); }
+  .surface-2 { background: var(--privacy-surface-2); }
+  .surface-3 { background: var(--privacy-surface-3); }
+  .border-subtle { border-color: var(--privacy-border); }
+  .text-muted { color: var(--privacy-muted); }
+}
+
+.privacy-grid { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 42px 42px; }
+.light .privacy-grid { background-image: linear-gradient(rgba(11,18,32,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(11,18,32,.035) 1px, transparent 1px); }
+
+.focus-ring { outline: none; }
+.focus-ring:focus-visible { box-shadow: 0 0 0 3px rgba(25,211,197,.18); border-color: rgba(25,211,197,.7); }
+
+.score-gradient { background: conic-gradient(#19d3c5 0deg, #5b7cff 180deg, #8b5cf6 270deg, rgba(255,255,255,.08) 270deg); }

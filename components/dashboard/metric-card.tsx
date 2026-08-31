@@ -1,0 +1,3 @@
+import { ArrowUpRight } from "lucide-react";
+import { Card } from "@/components/ui";
+export function MetricCard({label,value,delta,icon:Icon}:{label:string;value:string|number;delta?:string;icon:React.ElementType}){return <Card className="p-5"><div className="flex items-start justify-between"><div className="grid h-10 w-10 place-items-center rounded-xl bg-privacy-cyan/10 text-privacy-cyan"><Icon className="h-5 w-5"/></div>{delta&&<span className="flex items-center text-xs font-medium text-risk-low"><ArrowUpRight className="h-3.5 w-3.5"/>{delta}</span>}</div><p className="mt-6 text-xs text-muted">{label}</p><p className="mt-1 font-display text-3xl font-semibold">{value}</p></Card>}

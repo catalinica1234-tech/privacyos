@@ -1,0 +1,2 @@
+import { Progress } from "@/components/ui";
+export function ScoreDimension({ label, value, detail }: { label:string; value:number; detail?:string }) { return <div className="rounded-xl border border-subtle surface-2 p-4"><div className="flex items-center justify-between"><span className="text-sm font-medium">{label}</span><span className="font-display text-lg font-semibold">{value}</span></div><div className="mt-3"><Progress value={value}/></div>{detail&&<p className="mt-2 text-xs text-muted">{detail}</p>}</div>; }

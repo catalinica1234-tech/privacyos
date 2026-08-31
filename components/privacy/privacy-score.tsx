@@ -1,0 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
+import { Badge } from "@/components/ui";
+export function PrivacyScore({ score=78, size="lg" }: { score?: number; size?: "sm"|"lg" }) { const small=size==="sm"; return <div className={`text-center ${small?"":"py-4"}`}><div className={`relative mx-auto ${small?"h-28 w-28":"h-48 w-48"}`}><div className="absolute inset-0 rounded-full score-gradient p-[5px]"><div className="grid h-full w-full place-items-center rounded-full surface"><div><div className={`font-display font-semibold tracking-tight ${small?"text-3xl":"text-6xl"}`}>{score}</div><div className="text-xs text-muted">/100</div></div></div></div><div className="absolute -right-2 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-privacy-cyan/20 bg-privacy-cyan/10 text-privacy-cyan"><ShieldCheck className="h-4 w-4"/></div></div><div className="mt-4"><Badge tone="success">GOOD</Badge><p className="mt-2 text-xs text-muted">Demo methodology preview</p></div></div>; }

@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { ArrowRight, ScanLine } from "lucide-react";
+import { Button, Card } from "@/components/ui";
+export function QuickAction(){return <Card className="relative overflow-hidden border-privacy-cyan/15 p-5 sm:p-6"><div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-privacy-cyan/10 blur-3xl"/><div className="relative"><div className="grid h-10 w-10 place-items-center rounded-xl bg-privacy-cyan/10 text-privacy-cyan"><ScanLine className="h-5 w-5"/></div><h2 className="mt-5 font-display text-lg font-semibold">Analyze a digital service</h2><p className="mt-1 max-w-lg text-sm text-muted">Start a controlled demo analysis now. Live scanner capabilities will be connected in a later phase.</p><Link href="/dashboard/scanner" className="mt-5 inline-block"><Button>New analysis <ArrowRight className="h-4 w-4"/></Button></Link></div></Card>}

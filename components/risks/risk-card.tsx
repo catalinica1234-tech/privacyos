@@ -1,0 +1,5 @@
+import { ArrowUpRight, ShieldAlert } from "lucide-react";
+import { Card } from "@/components/ui";
+import { RiskBadge } from "./risk-badge";
+import type { RiskLevel } from "@/lib/demo/data";
+export function RiskCard({risk}:{risk:{id:string;level:RiskLevel;title:string;description:string;impact:string;likelihood:string}}){return <Card interactive className="p-5"><div className="flex items-start justify-between gap-4"><div className="flex items-start gap-3"><div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl surface-2 text-muted"><ShieldAlert className="h-5 w-5"/></div><div><RiskBadge level={risk.level}/><h3 className="mt-3 text-base font-semibold">{risk.title}</h3></div></div><ArrowUpRight className="h-4 w-4 text-muted"/></div><p className="mt-4 text-sm leading-6 text-muted">{risk.description}</p><div className="mt-5 flex gap-5 border-t border-subtle pt-4 text-xs"><span><b className="font-medium text-[var(--privacy-text)]">Impact</b><br/><span className="text-muted">{risk.impact}</span></span><span><b className="font-medium text-[var(--privacy-text)]">Likelihood</b><br/><span className="text-muted">{risk.likelihood}</span></span></div></Card>}

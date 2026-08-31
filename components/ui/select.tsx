@@ -1,0 +1,2 @@
+import { cn } from "@/lib/utils";
+export function Select({ label, className, children, ...props }: React.SelectHTMLAttributes<HTMLSelectElement> & { label?: string }) { return <label className="block space-y-2"><span className="text-sm font-medium">{label}</span><select className={cn("focus-ring w-full appearance-none rounded-xl border border-subtle surface-2 px-4 py-3 text-sm outline-none", className)} {...props}>{children}</select></label>; }

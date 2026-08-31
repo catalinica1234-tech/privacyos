@@ -1,0 +1,1 @@
+export function Avatar({ initials="IS" }: { initials?: string }) { return <div className="grid h-9 w-9 place-items-center rounded-full border border-privacy-cyan/20 bg-privacy-cyan/10 text-xs font-semibold text-privacy-cyan">{initials}</div>; }

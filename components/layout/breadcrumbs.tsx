@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function Breadcrumbs({ items }: { items: {label:string;href?:string}[] }) { return <div className="flex items-center gap-2 text-xs text-muted">{items.map((item,i)=><span key={item.label} className="flex items-center gap-2">{i>0&&<span>/</span>}{item.href?<Link href={item.href} className="hover:text-[var(--privacy-text)]">{item.label}</Link>:<span>{item.label}</span>}</span>)}</div>; }

@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function Logo({ href="/" }: { href?: string }) { return <Link href={href} className="inline-flex items-center gap-2.5 font-display text-base font-semibold tracking-tight"><span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-privacy-cyan via-privacy-blue to-privacy-violet text-sm font-bold text-[#061012] shadow-glow">◈</span><span>PRIVACYOS</span></Link>; }

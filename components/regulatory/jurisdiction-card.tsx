@@ -1,0 +1,3 @@
+import { ArrowUpRight } from "lucide-react";
+import { Card, Badge } from "@/components/ui";
+export function JurisdictionCard({flag,name,regulation}:{flag:string;name:string;regulation:string}){return <Card interactive className="p-5"><div className="flex items-center justify-between"><span className="text-2xl">{flag}</span><Badge tone="success">Available</Badge></div><h3 className="mt-5 font-display text-lg font-semibold">{name}</h3><p className="mt-1 text-sm text-muted">{regulation}</p><div className="mt-6 flex items-center gap-2 text-xs font-medium text-privacy-cyan">View framework <ArrowUpRight className="h-3.5 w-3.5"/></div></Card>}

@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Badge, Card } from "@/components/ui";
+export function AnalysisCard({ analysis }: { analysis:{id:string;domain:string;score:number;level:string;date:string} }) { const tone=analysis.score>=75?"success":analysis.score>=60?"medium":"high"; return <Link href={`/dashboard/analyses/${analysis.id}`}><Card interactive className="p-4"><div className="flex items-center justify-between gap-4"><div className="min-w-0"><p className="truncate text-sm font-semibold">{analysis.domain}</p><p className="mt-1 text-xs text-muted">{analysis.date}</p></div><div className="flex items-center gap-3"><div className="text-right"><p className="font-display text-lg font-semibold">{analysis.score}</p><Badge tone={tone}>{analysis.level}</Badge></div><ArrowUpRight className="h-4 w-4 text-muted"/></div></div></Card></Link>; }

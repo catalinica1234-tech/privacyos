@@ -1,0 +1,4 @@
+import { Search, Bell } from "lucide-react";
+import { Avatar } from "@/components/ui";
+import { ThemeToggle } from "./theme-toggle";
+export function Topbar({ title="Dashboard" }: { title?: string }) { return <div className="hidden h-16 items-center justify-between border-b border-subtle surface/90 px-6 backdrop-blur-xl lg:flex"><div><p className="text-xs text-muted">Workspace</p><h1 className="font-display text-sm font-semibold">{title}</h1></div><div className="flex items-center gap-2"><div className="hidden w-64 items-center gap-2 rounded-xl border border-subtle surface-2 px-3 py-2 text-sm text-muted xl:flex"><Search className="h-4 w-4"/><span>Search workspace...</span><kbd className="ml-auto rounded border border-subtle px-1.5 py-0.5 text-[10px]">⌘K</kbd></div><button aria-label="Notifications" className="rounded-xl border border-subtle surface-2 p-2 text-muted"><Bell className="h-4 w-4"/></button><ThemeToggle/><Avatar/></div></div>; }
