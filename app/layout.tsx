@@ -3,14 +3,24 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: "PRIVACYOS — The intelligence layer for digital privacy",
-  description: "Evidence-based privacy intelligence for digital services.",
-  keywords: ["privacy", "privacy intelligence", "cybersecurity", "GDPR", "Chile", "PRIVACYOS"],
+  title: "PRIVACYOS — Inteligencia para la privacidad digital",
+  description:
+    "Plataforma demostrativa de inteligencia de privacidad basada en evidencia para servicios digitales.",
+  keywords: [
+    "privacidad digital",
+    "ciberseguridad",
+    "protección de datos",
+    "GDPR",
+    "Chile",
+    "PRIVACYOS",
+  ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
