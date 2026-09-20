@@ -1,90 +1,144 @@
 # PRIVACYOS
 
-**The intelligence layer for digital privacy.**
+> **La capa de inteligencia para la privacidad digital.**
 
-PRIVACYOS is a modular privacy-intelligence SaaS foundation built with **Next.js, React, TypeScript and Tailwind CSS**. This repository contains **Phase 1 — Foundation**, focused on the interface, navigation and controlled demonstration flows.
+PRIVACYOS es una plataforma conceptual de inteligencia de privacidad que busca ayudar a las personas y organizaciones a comprender qué datos pueden ser tratados por un servicio digital, para qué se utilizan, qué terceros intervienen y qué riesgos deben revisarse.
 
-## Published application
+Este repositorio contiene la **Fase 1 — Foundation**, centrada en la experiencia de usuario, la navegación, la arquitectura inicial y los flujos demostrativos con datos controlados.
 
-- **Production preview:** https://privacyos-59ot.vercel.app/
-- **Repository:** https://github.com/catalinica1234-tech/privacyos
-- **Branch:** `main`
-- **Current phase:** Foundation / Demo
+---
 
-## Team
+## 🚀 Aplicación publicada
 
-| Integrante | Responsabilidad |
+- **Aplicación:** https://privacyos-59ot.vercel.app/
+- **Repositorio:** https://github.com/catalinica1234-tech/privacyos
+- **Rama principal:** `main`
+- **Estado actual:** Foundation / Demo
+
+> **Importante:** la versión publicada es un prototipo demostrativo. Las pantallas de análisis y escaneo no representan todavía una inspección real de sitios web ni un motor productivo de inteligencia artificial.
+
+---
+
+## 👥 Equipo de trabajo
+
+| Integrante | Responsabilidad principal |
 |---|---|
-| Catalina Romero | Frontend, integración y revisión |
-| Melisa Ibáñez | Documentación, investigación y propuesta |
-| Simón Salgado | Presentación, arquitectura y carta Gantt |
+| **Catalina Romero** | Desarrollo frontend, integración y revisión general |
+| **Melisa Ibáñez** | Documentación, investigación y propuesta de solución |
+| **Simón Salgado** | Presentación, arquitectura y planificación mediante carta Gantt |
 
-> Los nombres de usuario de GitHub deben agregarse cuando el equipo los confirme. No se inventan identificadores.
+Los nombres de usuario de GitHub se incorporarán cuando sean confirmados por cada integrante. No se incluyen identificadores inventados.
 
-## Phase 1 scope
+---
 
-- Premium responsive landing page.
-- Mock authentication UI.
-- Application shell and responsive navigation.
-- Dashboard with centralized demo data.
-- Scanner configuration UI and controlled demo scanning flow.
-- Demo analysis result.
-- Risks, regulatory intelligence, privacy rights, profile and settings pages.
-- Dark/light theme.
-- Reusable UI and domain components.
-- Loading, empty and error states.
+## 🎯 Propósito del proyecto
 
-## Current limitations
+PRIVACYOS propone una capa de inteligencia para analizar la privacidad de servicios digitales mediante la comparación entre:
 
-The following capabilities are **not active in Foundation**:
+1. **Lo que declara un servicio**, por ejemplo, su política de privacidad.
+2. **La evidencia técnica observable**, como cookies, rastreadores y tecnologías de terceros.
+3. **Los riesgos y aspectos regulatorios** que deberían ser revisados por el usuario.
 
-- Real authentication and session management.
-- Database persistence and Prisma integration.
-- Live website scanning.
-- AI analysis engine.
-- Production regulatory and risk engines.
-- Production Privacy Score calculation.
+La solución se proyecta como una plataforma modular que puede incorporar, en fases posteriores, autenticación real, persistencia de datos, análisis técnico automatizado, inteligencia artificial y motores de riesgo y regulación.
 
-The dashboard and scanner use controlled demo values. Entering a URL in the scanner does not request or inspect the external website.
+---
 
-## Technology stack
+## ✅ Alcance implementado en Foundation
 
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Recharts
-- Lucide React
-- Zod
+- Landing page responsiva con identidad visual de PRIVACYOS.
+- Pantallas de inicio de sesión y registro con navegación demostrativa.
+- Estructura principal de la aplicación y navegación responsiva.
+- Dashboard con información de demostración centralizada.
+- Configuración visual del escáner.
+- Flujo de escaneo demostrativo.
+- Vista de resultado de análisis de ejemplo.
+- Secciones de riesgos, regulación, derechos de privacidad, perfil y configuración.
+- Tema claro y oscuro.
+- Componentes reutilizables de interfaz y dominio.
+- Estados visuales de carga, vacío y error.
 
-## Run locally
+---
+
+## ⚠️ Limitaciones actuales
+
+Las siguientes capacidades **no están activas en esta fase**:
+
+- Autenticación real y administración de sesiones.
+- Persistencia en base de datos.
+- Integración operativa con Prisma, Supabase o PostgreSQL.
+- Escaneo real de sitios web.
+- Recolección de evidencia técnica en tiempo real.
+- Motor de análisis mediante inteligencia artificial.
+- Motor productivo de riesgos.
+- Motor productivo de regulación.
+- Cálculo productivo del Privacy Score.
+
+Los valores mostrados en el dashboard, el escáner y el análisis provienen de datos controlados para demostración. **Ingresar una URL no provoca una solicitud ni una inspección real del sitio externo.**
+
+---
+
+## 🧩 Tecnologías utilizadas
+
+- **Next.js 15**
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Recharts**
+- **Lucide React**
+- **Zod**
+
+La configuración actual está orientada a la interfaz y a los flujos de demostración de Foundation. Las tecnologías previstas para etapas futuras no deben interpretarse como integraciones productivas ya finalizadas.
+
+---
+
+## 💻 Ejecución local
+
+Requisitos recomendados:
+
+- Node.js 20 o superior.
+- npm.
+
+Instalar dependencias:
 
 ```bash
 npm install
+```
+
+Iniciar el entorno de desarrollo:
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Abrir en el navegador:
 
-For a production build:
-
-```bash
-npm run build
-npm run start
+```text
+http://localhost:3000
 ```
 
-For static type validation:
+### Comandos de validación
 
 ```bash
+npm run lint
 npm run typecheck
+npm run build
 ```
 
-## Main routes
+El resultado de cada comando debe verificarse en el entorno donde se ejecute. No se considera aprobado únicamente por estar declarado en este documento.
+
+---
+
+## 🧭 Rutas principales
+
+### Sitio público
 
 - `/`
 - `/login`
 - `/register`
+
+### Aplicación
+
 - `/dashboard`
 - `/dashboard/scanner`
 - `/dashboard/scanner/progress`
@@ -96,33 +150,79 @@ npm run typecheck
 - `/dashboard/profile`
 - `/dashboard/settings`
 
-## Demo behavior
+---
 
-Login and registration forms provide mock client-side navigation. The scanner launches a controlled demo flow, while the analysis page reads centralized demo data. No external website is actually scanned in this phase.
+## 🧪 Funcionamiento de la demostración
 
-## Documentation
+- El inicio de sesión y el registro permiten recorrer un flujo de navegación simulada.
+- El escáner presenta un proceso controlado de demostración.
+- La vista de análisis utiliza información centralizada de ejemplo.
+- No se consulta ni inspecciona realmente el sitio web introducido por el usuario.
+- Las capacidades de autenticación, base de datos, escaneo, IA y motores de riesgo/regulación quedan planificadas para etapas posteriores.
 
-Technical documentation is located in `docs/`:
+---
 
-- [`docs/architecture-foundation.md`](docs/architecture-foundation.md) — logical architecture of Foundation.
-- [`docs/audit-hito1-foundation.md`](docs/audit-hito1-foundation.md) — initial audit and verified evidence.
-- [`docs/requirements-traceability.md`](docs/requirements-traceability.md) — initial requirement traceability matrix.
-- [`docs/manual-validation-checklist.md`](docs/manual-validation-checklist.md) — manual browser validation checklist.
-- [`docs/deployment.md`](docs/deployment.md) — published environment and deployment evidence requirements.
+## 🏗️ Orientación arquitectónica
 
-Academic deliverables such as the report, presentation, team contract and Gantt chart will be incorporated after the team provides their final versions.
+La interfaz se organiza para separar la experiencia visual de los módulos que se incorporarán en fases futuras:
 
-## Quality checks
+- Interfaz y navegación.
+- Componentes reutilizables.
+- Datos de demostración.
+- Escáner.
+- Motor de inteligencia artificial.
+- Motor regulatorio.
+- Motor de riesgos.
+- Cálculo de puntuación de privacidad.
 
-GitHub Actions is configured to run on pushes and pull requests to `main`:
+Esta separación permite evolucionar el prototipo sin presentar las funciones futuras como si ya estuvieran implementadas.
 
-- `npm install`
-- `npm run lint`
-- `npm run typecheck`
-- `npm run build`
+---
 
-The repository must not describe these checks as successful until an actual workflow run confirms the result.
+## 📚 Documentación del repositorio
 
-## Architecture direction
+La documentación técnica se encuentra en la carpeta `docs/`:
 
-The UI is separated from future modules for Scanner, AI, Regulatory Engine, Risk Engine and Scoring. Later phases can replace demo data and mock authentication without redesigning the product shell.
+- [Arquitectura de Foundation](docs/architecture-foundation.md)
+- [Auditoría inicial del Hito 1](docs/audit-hito1-foundation.md)
+- [Matriz de trazabilidad de requisitos](docs/requirements-traceability.md)
+- [Lista de validación manual](docs/manual-validation-checklist.md)
+- [Documentación del despliegue](docs/deployment.md)
+
+Los entregables académicos independientes —como informe, presentación, contrato de equipo y carta Gantt— deben integrarse utilizando las versiones finales aprobadas por el equipo, sin inventar evidencias, fechas de reuniones ni identificadores personales.
+
+---
+
+## 🔎 Control de calidad
+
+El repositorio dispone de un flujo de GitHub Actions para ejecutar en cambios sobre `main` y en solicitudes de incorporación:
+
+1. Instalar dependencias.
+2. Ejecutar ESLint.
+3. Ejecutar la comprobación de tipos de TypeScript.
+4. Ejecutar la compilación de producción.
+
+La configuración de ESLint fue adaptada al formato de configuración plana utilizado por ESLint 9 mediante `eslint.config.mjs`.
+
+> El estado de calidad debe basarse en la ejecución real del flujo de GitHub Actions. Las advertencias de dependencias y los resultados de seguridad deben revisarse antes de declarar el proyecto completamente validado.
+
+---
+
+## 🛣️ Próximas etapas
+
+Las siguientes tareas corresponden a una evolución posterior y no forman parte de la funcionalidad productiva de Foundation:
+
+- Incorporar autenticación y sesiones reales.
+- Conectar una base de datos y definir persistencia.
+- Implementar un escáner técnico real con controles de seguridad.
+- Diseñar la recolección y trazabilidad de evidencias.
+- Integrar el análisis mediante IA.
+- Definir los motores de riesgo y regulación.
+- Implementar un cálculo verificable del Privacy Score.
+- Añadir pruebas automatizadas y evidencia de validación manual.
+
+---
+
+## 📌 Estado de transparencia
+
+PRIVACYOS se presenta actualmente como un **prototipo navegable de Foundation con flujos demostrativos**. La documentación diferencia explícitamente entre funcionalidades visibles, capacidades planificadas y validaciones que todavía requieren evidencia técnica o revisión manual.
