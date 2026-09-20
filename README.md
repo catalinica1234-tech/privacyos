@@ -45,6 +45,7 @@ npm run start
 - `/dashboard`
 - `/dashboard/scanner`
 - `/dashboard/scanner/progress`
+- `/dashboard/analyses`
 - `/dashboard/analyses/demo-001`
 - `/dashboard/risks`
 - `/dashboard/regulations`
@@ -59,3 +60,12 @@ Login/register forms use mock client-side navigation only. The scanner launches 
 ## Architecture direction
 
 The UI is intentionally separated from future modules for Scanner, AI, Regulatory Engine, Risk Engine and Scoring. Phase 2 can replace the demo data and mock auth without redesigning the product shell.
+
+## Hito 1 — Documentation técnica
+
+La documentación técnica disponible en este repositorio se encuentra en `docs/`:
+
+- [`docs/architecture-foundation.md`](docs/architecture-foundation.md): arquitectura lógica de la fase Foundation.
+- [`docs/audit-hito1-foundation.md`](docs/audit-hito1-foundation.md): auditoría inicial, evidencias y pendientes verificables.
+
+Los documentos académicos que se estén preparando por separado se incorporarán y revisarán posteriormente, sin presentarlos como finalizados antes de recibirlos.
