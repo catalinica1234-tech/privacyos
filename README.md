@@ -200,7 +200,7 @@ Los PDF finales del informe y la presentación, además de las imágenes definit
 
 El repositorio incluye un flujo de GitHub Actions en `.github/workflows/quality-checks.yml` que intenta ejecutar en cada cambio a `main`, en solicitudes de incorporación y manualmente:
 
-1. Instalar dependencias con `npm ci`.
+1. Instalar dependencias con `npm install` (el repositorio actualmente no contiene `package-lock.json`).
 2. Ejecutar ESLint.
 3. Ejecutar la comprobación de tipos de TypeScript.
 4. Compilar la aplicación.
