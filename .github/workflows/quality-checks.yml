@@ -1,0 +1,35 @@
+name: Validaciones del proyecto
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  quality:
+    name: Lint, TypeScript y build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Revisar ESLint
+        run: npm run lint
+
+      - name: Revisar tipos TypeScript
+        run: npm run typecheck
+
+      - name: Compilar aplicación
+        run: npm run build
