@@ -102,7 +102,7 @@ Requisitos recomendados:
 Instalar dependencias:
 
 ```bash
-npm ci
+npm install
 ```
 
 Iniciar el entorno de desarrollo:
