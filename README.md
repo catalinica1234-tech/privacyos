@@ -2,7 +2,7 @@
 
 > **La capa de inteligencia para la privacidad digital.**
 
-PRIVACYOS es una plataforma conceptual de inteligencia de privacidad que busca ayudar a las personas y organizaciones a comprender qué datos pueden ser tratados por un servicio digital, para qué se utilizan, qué terceros intervienen y qué riesgos deben revisarse.
+PRIVACYOS es una plataforma conceptual de inteligencia de privacidad que busca ayudar a las personas y organizaciones a comprender qué datos puede tratar un servicio digital, para qué se utilizan, qué terceros intervienen y qué riesgos deben revisarse.
 
 Este repositorio contiene la **Fase 1 — Foundation**, centrada en la experiencia de usuario, la navegación, la arquitectura inicial y los flujos demostrativos con datos controlados.
 
@@ -23,7 +23,7 @@ Este repositorio contiene la **Fase 1 — Foundation**, centrada en la experienc
 
 | Integrante | Responsabilidad principal |
 |---|---|
-| **Catalina Romero** | Desarrollo frontend, integración y revisión general |
+| **Catalina Romero** | Desarrollo Front-End, integración y revisión general |
 | **Melisa Ibáñez** | Documentación, investigación y propuesta de solución |
 | **Simón Salgado** | Presentación, arquitectura y planificación mediante carta Gantt |
 
@@ -102,7 +102,7 @@ Requisitos recomendados:
 Instalar dependencias:
 
 ```bash
-npm install
+npm ci
 ```
 
 Iniciar el entorno de desarrollo:
@@ -125,7 +125,7 @@ npm run typecheck
 npm run build
 ```
 
-El resultado de cada comando debe verificarse en el entorno donde se ejecute. No se considera aprobado únicamente por estar declarado en este documento.
+Los comandos deben ejecutarse y sus resultados verificarse antes de afirmar que la aplicación está validada.
 
 ---
 
@@ -179,32 +179,33 @@ Esta separación permite evolucionar el prototipo sin presentar las funciones fu
 
 ---
 
-## 📚 Documentación del repositorio
-
-La documentación técnica se encuentra en la carpeta `docs/`:
+## 📚 Documentación y gestión del proyecto
 
 - [Arquitectura de Foundation](docs/architecture-foundation.md)
 - [Auditoría inicial del Hito 1](docs/audit-hito1-foundation.md)
 - [Matriz de trazabilidad de requisitos](docs/requirements-traceability.md)
-- [Lista de validación manual](docs/manual-validation-checklist.md)
+- [Checklist de validación manual](docs/manual-validation-checklist.md)
 - [Documentación del despliegue](docs/deployment.md)
+- [Checklist de entregables del Hito 1](docs/plan-entregables-hito1.md)
+- [Carta Gantt provisional](docs/carta-gantt.md)
+- [Contrato de equipo — borrador](docs/contrato-equipo.md)
 
-Los entregables académicos independientes —como informe, presentación, contrato de equipo y carta Gantt— deben integrarse utilizando las versiones finales aprobadas por el equipo, sin inventar evidencias, fechas de reuniones ni identificadores personales.
+### Entregables académicos pendientes de integrar
+
+Los PDF finales del informe y la presentación, además de las imágenes definitivas del mapa del producto y del diagrama de arquitectura, deben incorporarse a `docs/` una vez revisados y aprobados por el equipo. La presentación permanece pendiente según el estado informado por el equipo. No se deben registrar como completados entregables que aún no existen.
 
 ---
 
 ## 🔎 Control de calidad
 
-El repositorio dispone de un flujo de GitHub Actions para ejecutar en cambios sobre `main` y en solicitudes de incorporación:
+El repositorio incluye un flujo de GitHub Actions en `.github/workflows/quality-checks.yml` que intenta ejecutar en cada cambio a `main`, en solicitudes de incorporación y manualmente:
 
-1. Instalar dependencias.
+1. Instalar dependencias con `npm ci`.
 2. Ejecutar ESLint.
 3. Ejecutar la comprobación de tipos de TypeScript.
-4. Ejecutar la compilación de producción.
+4. Compilar la aplicación.
 
-La configuración de ESLint fue adaptada al formato de configuración plana utilizado por ESLint 9 mediante `eslint.config.mjs`.
-
-> El estado de calidad debe basarse en la ejecución real del flujo de GitHub Actions. Las advertencias de dependencias y los resultados de seguridad deben revisarse antes de declarar el proyecto completamente validado.
+La existencia del flujo no garantiza que esté aprobado: debe revisarse el resultado real en la pestaña **Actions** de GitHub y corregirse cualquier fallo antes de declarar el proyecto validado.
 
 ---
 
@@ -225,4 +226,4 @@ Las siguientes tareas corresponden a una evolución posterior y no forman parte 
 
 ## 📌 Estado de transparencia
 
-PRIVACYOS se presenta actualmente como un **prototipo navegable de Foundation con flujos demostrativos**. La documentación diferencia explícitamente entre funcionalidades visibles, capacidades planificadas y validaciones que todavía requieren evidencia técnica o revisión manual.
+PRIVACYOS se presenta actualmente como un **prototipo navegable de Foundation con flujos demostrativos**. La documentación diferencia entre funcionalidades visibles, capacidades planificadas y validaciones que todavía requieren evidencia técnica o revisión manual.
