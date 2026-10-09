@@ -9,9 +9,9 @@
 | Arquitectura | `docs/architecture-foundation.md` | Documentada | Exportar a imagen si la pauta lo exige | Alta |
 | README | `README.md` | Presente y actualizado | Completar integrantes y usuarios GitHub cuando se confirmen | Alta |
 | Alcance funcional | README y avisos de demo en dashboard/scanner | Verificado | Mantener la distinción entre demo y funcionalidad real | Alta |
-| Variables de entorno | `.env.example` y `.gitignore` | Verificado a nivel de archivos | Revisar que no existan secretos en el historial | Alta |
-| Calidad técnica | `tsconfig.json`, `.eslintrc.json`, `next.config.ts` | Configuración presente | Ejecutar lint, build y TypeScript en un entorno con dependencias | Alta |
-| Persistencia | README declara que base de datos y Prisma no están activos | No implementado en Foundation | No presentarlo como funcionalidad existente | Alta |
+| Variables de entorno | `.env.example` y `.gitignore` | Archivos revisados; `.env.example` contiene nombres comentados y no valores | Revisar que no existan secretos en el historial; la inspección de estos archivos no certifica todo el historial | Alta |
+| Calidad técnica | `package.json`, `tsconfig.json`, `eslint.config.mjs`, `next.config.ts` | Configuración presente; resultados no certificados | Ejecutar lint, build y TypeScript en CI y revisar los resultados | Alta |
+| Persistencia | README declara que base de datos y Prisma no están activos; no se localizaron `prisma/schema.prisma` ni `lib/prisma.ts` en las rutas consultadas de `main` | No verificada como integrada en la rama actual | No presentarla como funcionalidad existente; confirmar la estructura antes de iniciar Fase 2 | Alta |
 | Escaneo real | `app/dashboard/scanner/page.tsx` declara modo demo | No implementado en Foundation | Mantener aviso visible y documentar fase futura | Media |
 | Evidencia de despliegue | URL de Vercel proporcionada por el equipo | No certificada desde este documento | Adjuntar captura o enlace revisado durante la entrega | Media |
 
