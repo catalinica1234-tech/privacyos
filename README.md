@@ -1,123 +1,117 @@
 # PRIVACYOS
 
-> **La capa de inteligencia para la privacidad digital.**
+**Inteligencia para comprender la privacidad digital.**
 
-PRIVACYOS es una plataforma conceptual de inteligencia de privacidad que busca ayudar a las personas y organizaciones a comprender qué datos puede tratar un servicio digital, para qué se utilizan, qué terceros intervienen y qué riesgos deben revisarse.
+PRIVACYOS es un prototipo de plataforma orientado a organizar información sobre privacidad digital y facilitar la revisión de las declaraciones de un servicio frente a señales técnicas disponibles. Su propuesta se centra en presentar los hallazgos de forma comprensible, con contexto y límites explícitos.
 
-Este repositorio contiene la **Fase 1 — Foundation**, centrada en la experiencia de usuario, la navegación, la arquitectura inicial y los flujos demostrativos con datos controlados.
+<p align="center">
+  <a href="https://privacyos-59ot.vercel.app/"><strong>Ver aplicación</strong></a>
+  ·
+  <a href="https://github.com/catalinica1234-tech/privacyos/tree/main/docs"><strong>Documentación</strong></a>
+</p>
 
----
+## Descripción
 
-## 🚀 Aplicación publicada
+La plataforma propone una lectura estructurada de tres elementos:
 
-- **Aplicación:** https://privacyos-59ot.vercel.app/
-- **Repositorio:** https://github.com/catalinica1234-tech/privacyos
-- **Rama principal:** `main`
-- **Estado actual:** Foundation / Demo
+- **Declaraciones:** lo que un servicio comunica en sus políticas y documentación.
+- **Señales observables:** información técnica disponible para contextualizar esas declaraciones.
+- **Interpretación:** riesgos potenciales, referencias regulatorias y aspectos que requieren revisión.
 
-> **Importante:** la versión publicada es un prototipo demostrativo. Las pantallas de análisis y escaneo no representan todavía una inspección real de sitios web ni un motor productivo de inteligencia artificial.
+Una diferencia entre una declaración y una señal no constituye, por sí sola, una prueba de incumplimiento. El propósito de la experiencia es organizar información y apoyar la revisión, no emitir un dictamen legal automático.
 
----
+## Aplicación
 
-## 👥 Equipo de trabajo
+**Demo pública:** [privacyos-59ot.vercel.app](https://privacyos-59ot.vercel.app/)
 
-| Integrante | Responsabilidad principal |
-|---|---|
-| **Catalina Romero** | Desarrollo Front-End, integración y revisión general |
-| **Melisa Ibáñez** | Documentación, investigación y propuesta de solución |
-| **Simón Salgado** | Presentación, arquitectura y planificación mediante carta Gantt |
+La versión actual corresponde a Foundation y utiliza datos de demostración. El flujo de escaneo y los resultados permiten recorrer la experiencia, pero no inspeccionan realmente el sitio web introducido ni ejecutan motores productivos de análisis.
 
-Los nombres de usuario de GitHub se incorporarán cuando sean confirmados por cada integrante. No se incluyen identificadores inventados.
+## Funcionalidades de Foundation
 
----
-
-## 🎯 Propósito del proyecto
-
-PRIVACYOS propone una capa de inteligencia para analizar la privacidad de servicios digitales mediante la comparación entre:
-
-1. **Lo que declara un servicio**, por ejemplo, su política de privacidad.
-2. **La evidencia técnica observable**, como cookies, rastreadores y tecnologías de terceros.
-3. **Los riesgos y aspectos regulatorios** que deberían ser revisados por el usuario.
-
-La solución se proyecta como una plataforma modular que puede incorporar, en fases posteriores, autenticación real, persistencia de datos, análisis técnico automatizado, inteligencia artificial y motores de riesgo y regulación.
-
----
-
-## ✅ Alcance implementado en Foundation
-
-- Landing page responsiva con identidad visual de PRIVACYOS.
-- Pantallas de inicio de sesión y registro con navegación demostrativa.
-- Estructura principal de la aplicación y navegación responsiva.
-- Dashboard con información de demostración centralizada.
-- Configuración visual del escáner.
-- Flujo de escaneo demostrativo.
-- Vista de resultado de análisis de ejemplo.
-- Secciones de riesgos, regulación, derechos de privacidad, perfil y configuración.
+- Página de presentación del producto.
+- Vistas de inicio de sesión y registro con navegación demostrativa.
+- Dashboard con datos de ejemplo.
+- Escáner y pantalla de progreso en modo demostración.
+- Historial y detalle de análisis de ejemplo.
+- Secciones de riesgos, regulación y derechos de privacidad.
+- Perfil y configuración.
+- Componentes reutilizables y navegación adaptable.
 - Tema claro y oscuro.
-- Componentes reutilizables de interfaz y dominio.
-- Estados visuales de carga, vacío y error.
 
----
+## Alcance técnico
 
-## ⚠️ Limitaciones actuales
+Las siguientes capacidades no forman parte de la implementación funcional de Foundation:
 
-Las siguientes capacidades **no están activas en esta fase**:
-
-- Autenticación real y administración de sesiones.
-- Persistencia en base de datos.
-- Integración operativa con Prisma, Supabase o PostgreSQL.
-- Escaneo real de sitios web.
-- Recolección de evidencia técnica en tiempo real.
-- Motor de análisis mediante inteligencia artificial.
-- Motor productivo de riesgos.
-- Motor productivo de regulación.
+- Autenticación real y gestión de sesiones.
+- Persistencia en una base de datos.
+- Inspección técnica de sitios web en tiempo real.
+- Recolección automatizada de evidencia.
+- Motores productivos de inteligencia artificial, riesgos o regulación.
 - Cálculo productivo del Privacy Score.
 
-Los valores mostrados en el dashboard, el escáner y el análisis provienen de datos controlados para demostración. **Ingresar una URL no provoca una solicitud ni una inspección real del sitio externo.**
+Los valores mostrados en la interfaz son datos controlados para demostración. Introducir una URL no genera solicitudes ni análisis del sitio externo.
 
----
+## Tecnologías
 
-## 🧩 Tecnologías utilizadas
+| Tecnología | Uso |
+|---|---|
+| Next.js 15 | Estructura de la aplicación y sistema de rutas |
+| React 19 | Componentes e interacción de interfaz |
+| TypeScript | Tipado estático |
+| Tailwind CSS | Estilos y composición visual |
+| Framer Motion | Animaciones de interfaz |
+| Recharts | Visualizaciones de datos |
+| Lucide React | Iconografía |
+| Zod | Validación de esquemas |
 
-- **Next.js 15**
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS**
-- **Framer Motion**
-- **Recharts**
-- **Lucide React**
-- **Zod**
+## Estructura del repositorio
 
-La configuración actual está orientada a la interfaz y a los flujos de demostración de Foundation. Las tecnologías previstas para etapas futuras no deben interpretarse como integraciones productivas ya finalizadas.
+```text
+privacyos/
+├── app/                 # Rutas y páginas de la aplicación
+├── components/          # Componentes reutilizables
+├── lib/                 # Utilidades y datos compartidos
+├── docs/                # Arquitectura y documentación del proyecto
+├── public/              # Recursos estáticos
+├── package.json         # Dependencias y comandos
+└── README.md
+```
 
----
+## Documentación
 
-## 💻 Ejecución local
+- [Arquitectura de Foundation](docs/architecture-foundation.md)
+- [Carta Gantt](docs/carta-gantt.md)
+- [Contrato de equipo](docs/contrato-equipo.md)
+- [Documentación de despliegue](docs/deployment.md)
+- [Trazabilidad de requisitos](docs/requirements-traceability.md)
+- [Auditoría técnica de Foundation](docs/audit-hito1-foundation.md)
+- [Validación manual](docs/manual-validation-checklist.md)
 
-Requisitos recomendados:
+## Equipo
+
+| Integrante | Responsabilidades |
+|---|---|
+| **Catalina Romero** | Desarrollo frontend, integración y revisión técnica |
+| **Melisa Ibáñez** | Documentación, investigación y propuesta de solución |
+| **Simón Salgado** | Presentación, arquitectura y planificación |
+
+## Ejecución local
+
+### Requisitos
 
 - Node.js 20 o superior.
 - npm.
 
-Instalar dependencias:
+### Instalación
 
 ```bash
 npm install
-```
-
-Iniciar el entorno de desarrollo:
-
-```bash
 npm run dev
 ```
 
-Abrir en el navegador:
+Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-```text
-http://localhost:3000
-```
-
-### Comandos de validación
+### Comprobaciones disponibles
 
 ```bash
 npm run lint
@@ -125,105 +119,25 @@ npm run typecheck
 npm run build
 ```
 
-Los comandos deben ejecutarse y sus resultados verificarse antes de afirmar que la aplicación está validada.
+Estos comandos permiten revisar lint, tipos y compilación. Sus resultados deben comprobarse en el entorno donde se ejecuten; la existencia de los scripts no implica que todas las comprobaciones estén aprobadas.
 
----
+## Arquitectura de Foundation
 
-## 🧭 Rutas principales
+```mermaid
+flowchart TD
+    U[Persona usuaria] --> WEB[Interfaz web · Next.js y React]
+    WEB --> ROUTES[Rutas de la aplicación]
+    ROUTES --> COMPONENTS[Componentes reutilizables]
+    COMPONENTS --> DEMO[Datos y flujos de demostración]
+    DEMO --> VIEWS[Dashboard y vistas de análisis]
+    FUTURE[Servicios futuros] -.-> AUTH[Autenticación]
+    FUTURE -.-> DB[Persistencia]
+    FUTURE -.-> SCAN[Análisis técnico real]
+    FUTURE -.-> INTEL[Inteligencia de riesgos y regulación]
+```
 
-### Sitio público
+El diagrama distingue la interfaz demostrativa de los servicios que corresponden a una evolución posterior del proyecto.
 
-- `/`
-- `/login`
-- `/register`
+## Licencia
 
-### Aplicación
-
-- `/dashboard`
-- `/dashboard/scanner`
-- `/dashboard/scanner/progress`
-- `/dashboard/analyses`
-- `/dashboard/analyses/demo-001`
-- `/dashboard/risks`
-- `/dashboard/regulations`
-- `/dashboard/rights`
-- `/dashboard/profile`
-- `/dashboard/settings`
-
----
-
-## 🧪 Funcionamiento de la demostración
-
-- El inicio de sesión y el registro permiten recorrer un flujo de navegación simulada.
-- El escáner presenta un proceso controlado de demostración.
-- La vista de análisis utiliza información centralizada de ejemplo.
-- No se consulta ni inspecciona realmente el sitio web introducido por el usuario.
-- Las capacidades de autenticación, base de datos, escaneo, IA y motores de riesgo/regulación quedan planificadas para etapas posteriores.
-
----
-
-## 🏗️ Orientación arquitectónica
-
-La interfaz se organiza para separar la experiencia visual de los módulos que se incorporarán en fases futuras:
-
-- Interfaz y navegación.
-- Componentes reutilizables.
-- Datos de demostración.
-- Escáner.
-- Motor de inteligencia artificial.
-- Motor regulatorio.
-- Motor de riesgos.
-- Cálculo de puntuación de privacidad.
-
-Esta separación permite evolucionar el prototipo sin presentar las funciones futuras como si ya estuvieran implementadas.
-
----
-
-## 📚 Documentación y gestión del proyecto
-
-- [Arquitectura de Foundation](docs/architecture-foundation.md)
-- [Auditoría inicial del Hito 1](docs/audit-hito1-foundation.md)
-- [Matriz de trazabilidad de requisitos](docs/requirements-traceability.md)
-- [Checklist de validación manual](docs/manual-validation-checklist.md)
-- [Documentación del despliegue](docs/deployment.md)
-- [Checklist de entregables del Hito 1](docs/plan-entregables-hito1.md)
-- [Carta Gantt provisional](docs/carta-gantt.md)
-- [Contrato de equipo — borrador](docs/contrato-equipo.md)
-
-### Entregables académicos pendientes de integrar
-
-Los PDF finales del informe y la presentación, además de las imágenes definitivas del mapa del producto y del diagrama de arquitectura, deben incorporarse a `docs/` una vez revisados y aprobados por el equipo. La presentación permanece pendiente según el estado informado por el equipo. No se deben registrar como completados entregables que aún no existen.
-
----
-
-## 🔎 Control de calidad
-
-El repositorio incluye un flujo de GitHub Actions en `.github/workflows/quality-checks.yml` que intenta ejecutar en cada cambio a `main`, en solicitudes de incorporación y manualmente:
-
-1. Instalar dependencias con `npm install` (el repositorio actualmente no contiene `package-lock.json`).
-2. Ejecutar ESLint.
-3. Ejecutar la comprobación de tipos de TypeScript.
-4. Compilar la aplicación.
-
-La existencia del flujo no garantiza que esté aprobado: debe revisarse el resultado real en la pestaña **Actions** de GitHub y corregirse cualquier fallo antes de declarar el proyecto validado.
-
----
-
-## 🛣️ Próximas etapas
-
-Las siguientes tareas corresponden a una evolución posterior y no forman parte de la funcionalidad productiva de Foundation:
-
-- Incorporar autenticación y sesiones reales.
-- Conectar una base de datos y definir persistencia.
-- Implementar un escáner técnico real con controles de seguridad.
-- Diseñar la recolección y trazabilidad de evidencias.
-- Integrar el análisis mediante IA.
-- Definir los motores de riesgo y regulación.
-- Implementar un cálculo verificable del Privacy Score.
-- Añadir pruebas automatizadas y evidencia de validación manual.
-
----
-
-## 📌 Estado de transparencia
-
-PRIVACYOS se presenta actualmente como un **prototipo navegable de Foundation con flujos demostrativos**. La documentación diferencia entre funcionalidades visibles, capacidades planificadas y validaciones que todavía requieren evidencia técnica o revisión manual.
+Este repositorio se desarrolla en el contexto académico del proyecto PRIVACYOS. No se ha especificado una licencia de distribución independiente.
